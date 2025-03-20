@@ -50,7 +50,7 @@
 190	1396	7634416313570077	CMakeFiles/main.dir/C_/Users/Elias/.pico-sdk/sdk/2.1.1/src/rp2_common/hardware_vreg/vreg.c.obj	ec4b086a67fd33c3
 63	1438	7634416312421209	CMakeFiles/main.dir/C_/Users/Elias/.pico-sdk/sdk/2.1.1/src/common/pico_util/queue.c.obj	add51e6296f2c37c
 10810	11589	7634416419943701	CMakeFiles/main.dir/C_/Users/Elias/.pico-sdk/sdk/2.1.1/lib/tinyusb/src/class/dfu/dfu_device.c.obj	b8cef4a91821c19c
-141	2585	7636713721331926	CMakeFiles/main.dir/main.c.obj	5ce6dc81e73e871b
+103	2309	7641922484950895	CMakeFiles/main.dir/main.c.obj	5ce6dc81e73e871b
 97	2089	7634416312763104	CMakeFiles/main.dir/C_/Users/Elias/.pico-sdk/sdk/2.1.1/src/rp2_common/hardware_clocks/clocks.c.obj	e1d06f405e610415
 47670	50164	7636584410361010	CMakeFiles/main.dir/C_/Users/Miguel_Ryan/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_stdio/stdio.c.obj	9f75abd9ea40477e
 36458	38059	7636584299088218	CMakeFiles/main.dir/C_/Users/Miguel_Ryan/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj	adfe7031d8f45a3e
@@ -108,7 +108,7 @@
 12554	14224	7634416437281001	CMakeFiles/main.dir/C_/Users/Elias/.pico-sdk/sdk/2.1.1/lib/tinyusb/src/common/tusb_fifo.c.obj	320febc4c84416b2
 13637	14423	7634416448774362	CMakeFiles/main.dir/C_/Users/Elias/.pico-sdk/sdk/2.1.1/src/rp2_common/hardware_adc/adc.c.obj	ef93287a842327fe
 43790	45268	7636584371735518	CMakeFiles/main.dir/C_/Users/Miguel_Ryan/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj	ee453288d108c809
-2587	5024	7636713745744194	main.elf	a2b4b5590d486352
+3752	8011	7641920249578195	main.elf	a2b4b5590d486352
 219	848	7635283496802669	C:/Users/Miguel Ryan/Projects/micro/raspberry/pico-w/bitdoglab-matriz-leds-lib/build/main.pio.h	45dfc78604465157
 2373	2643	7635283516312983	C:/Users/Miguel Ryan/Projects/micro/raspberry/pico-w/bitdoglab-matriz-leds-lib/build/pico-sdk/src/rp2040/boot_stage2/bs2_default_padded_checksummed.S	77816d3d9e077359
 5050	7368	7636583984163410	CMakeFiles/main.dir/C_/Users/Miguel_Ryan/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_stdlib/stdlib.c.obj	34219722077ff1cc
@@ -180,5 +180,7 @@
 63743	65173	7636584571105216	CMakeFiles/main.dir/C_/Users/Miguel_Ryan/.pico-sdk/sdk/2.1.1/lib/tinyusb/src/common/tusb_fifo.c.obj	6c04e05e3cb92d5a
 65969	68244	7636584593354535	CMakeFiles/main.dir/C_/Users/Miguel_Ryan/.pico-sdk/sdk/2.1.1/src/rp2_common/hardware_pio/pio.c.obj	9281be949a7960d5
 4669	5039	7636583983844711	C:/Users/Miguel Ryan/Projects/micro/raspberry/pico-w/bitdoglab-mledsrgb-lib/build/pico-sdk/src/rp2040/boot_stage2/bs2_default_padded_checksummed.S	c0d043a84d10483f
-175	3420	7641908880563471	CMakeFiles/main.dir/main.c.obj	5ce6dc81e73e871b
-3423	9191	7641908913020175	main.elf	a2b4b5590d486352
+104	2683	7641923320034548	build.ninja	8e440f42fd105fb
+124	2150	7641922485149818	CMakeFiles/main.dir/led_functions.c.obj	bdcb9e1f1f214291
+77	2355	7641923320034548	build.ninja	8e440f42fd105fb
+85	1045	7641923323470966	main.elf	a2b4b5590d486352

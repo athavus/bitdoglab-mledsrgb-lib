@@ -7,7 +7,7 @@
 #include "init_GPIO.h"
 #include "frames.h"
 #include "letters.h"
-#include "led_functions.h"
+#include "led_functions.c"
 
 // ==== CONFIGURAÇÕES DO SISTEMA ====
 #define SYS_CLOCK_KHZ 128000 // Clock do sistema em kHz (128 MHz)
