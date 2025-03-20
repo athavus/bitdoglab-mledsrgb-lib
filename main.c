@@ -68,7 +68,8 @@ void button_callback(uint gpio, uint32_t events)
     }
 }
 
-void demo_test() {
+void demo_test()
+{
     printf("VOCÊ ENTROU NO MODO DE DEMO\n");
     printf("VALOR DO pio: %p\n", (void *)pio);
     printf("VALOR DO sm: %d\n", sm);
@@ -77,7 +78,8 @@ void demo_test() {
     show_demo1(pio, sm, 500);
 }
 
-void message_test(RGBColor message_color) {
+void message_test(RGBColor message_color)
+{
     printf("VOCÊ ENTROU NO MODO DE MENSAGEM EM ROLAGEM\n");
     printf("FRASE ESCOLHIDA: %s\n", PHRASE);
     printf("CORES DA MENSAGEM R:%d G:%d B:%d\n", COLOR_LED_R, COLOR_LED_G, COLOR_LED_B);
@@ -94,7 +96,6 @@ void message_test(RGBColor message_color) {
         INTENSITY,
         SPEED);
 }
-
 
 int main()
 {
@@ -134,26 +135,12 @@ int main()
     // Inicialmente, não mostrar nada
     while (1)
     {
-        if (!gpio_get(JSTICK))
-        {
-            reset_usb_boot(0, 0); // Reinicia em modo bootloader
-        }
+        // Exemplo: adiciona LEDs nos cantos com diferentes cores
+        add_led(0, (RGBColor){1.0, 0.0, 0.0}, pio, sm);  // Vermelho
+        add_led(4, (RGBColor){0.0, 1.0, 0.0}, pio, sm);  // Verde
+        add_led(20, (RGBColor){0.0, 0.0, 1.0}, pio, sm); // Azul
+        add_led(24, (RGBColor){1.0, 1.0, 0.0}, pio, sm); // Amarelo
 
-        // Verifica se deve mostrar o demo
-        if (demo_active)
-        {
-            demo_test();
-            demo_active = false;
-        }
-
-        // Verifica se deve mostrar a mensagem
-        if (message_active)
-        {
-            message_test(message_color);
-            message_active = false;
-        }
-
-        // Pequena pausa para não sobrecarregar o CPU
-        sleep_ms(10);
+        sleep_ms(2000);
     }
 }
