@@ -91,8 +91,9 @@ void concatenate_text(double *text[], int text_length, double full_text[5][MAX_R
  * @param color Cor desejada
  * @param pio Instância do PIO usada
  * @param sm State machine ativa
+ * @param intensity Intensidade da cor do led
  */
-void add_led(int index, RGBColor color, PIO pio, uint sm);
+void add_led(int index, RGBColor color, PIO pio, uint sm, double intensity);
 
 /**
  * Exibe uma mensagem rolando na matriz de LEDs.

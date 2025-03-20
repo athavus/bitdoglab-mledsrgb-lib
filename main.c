@@ -136,10 +136,10 @@ int main()
     while (1)
     {
         // Exemplo: adiciona LEDs nos cantos com diferentes cores
-        add_led(0, (RGBColor){1.0, 0.0, 0.0}, pio, sm);  // Vermelho
-        add_led(4, (RGBColor){0.0, 1.0, 0.0}, pio, sm);  // Verde
-        add_led(20, (RGBColor){0.0, 0.0, 1.0}, pio, sm); // Azul
-        add_led(24, (RGBColor){1.0, 1.0, 0.0}, pio, sm); // Amarelo
+        add_led(0, (RGBColor){255, 0, 0}, pio, sm, 0.1);  // Vermelho
+        add_led(4, (RGBColor){0, 255, 0}, pio, sm, 0.1);  // Verde
+        add_led(20, (RGBColor){0.0, 0.0, 255}, pio, sm, 0.1); // Azul
+        add_led(24, (RGBColor){255, 255, 0}, pio, sm, 0.1); // Amarelo
 
         sleep_ms(2000);
     }

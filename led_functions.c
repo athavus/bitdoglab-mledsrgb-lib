@@ -122,12 +122,22 @@ void concatenate_text(double *text[], int text_length, double full_text[5][MAX_R
     }
 }
 
-void add_led(int index, RGBColor color, PIO pio, uint sm) {
+void add_led(int index, RGBColor color, PIO pio, uint sm, double intensity) {
     if (index < 0 || index >= NUM_LEDS) return;
 
-    set_led(index, color, pio, sm);
-}
+    if (intensity < 0.0) intensity = 0.0;
+    if (intensity > 1.0) intensity = 1.0;
 
+    normalize_color(&color);
+
+    RGBColor adjusted = {
+        color.r * intensity,
+        color.g * intensity,
+        color.b * intensity
+    };
+
+    set_led(index, adjusted, pio, sm);
+}
 void show_message(const char *text, RGBColor color, PIO pio, uint sm, double intensity, int speed) {
     if (!text) return;
 
