@@ -4,10 +4,9 @@
 #include "hardware/clocks.h"
 #include "pico/bootrom.h"
 #include "main.pio.h"
-#include "init_GPIO.h"
 #include "frames.h"
 #include "letters.h"
-#include "led_functions.c"
+#include "led_functions.h"
 
 // ==== CONFIGURAÇÕES DO SISTEMA ====
 #define SYS_CLOCK_KHZ 128000 // Clock do sistema em kHz (128 MHz)
@@ -20,6 +19,7 @@
 #define COLOR_LED_B 255
 #define BUTTONA_PIN 5 // Botão A conectado ao GPIO5
 #define BUTTONB_PIN 6 // Botão B conectado ao GPIO6
+#define OUT_PIN 7
 
 bool matrix_init(PIO *pio, uint *sm, uint *offset)
 {
@@ -100,7 +100,6 @@ void message_test(RGBColor message_color)
 int main()
 {
     stdio_init_all();
-    init_GPIO();
 
     // Configuração dos botões com pull-up interno
     gpio_init(BUTTONA_PIN);

@@ -1,269 +1,39 @@
 #ifndef LETTERS_H
 #define LETTERS_H
 
-#include "frames.h"
 #include "pico/stdlib.h"
-
 #define NUM_LEDS 25
 
-// Definição das letras (A-Z)
-double A[NUM_LEDS] = 
-{
-    0, 1, 1, 1, 0,
-    1, 0, 0, 0, 1,
-    1, 1, 1, 1, 1,
-    1, 0, 0, 0, 1,
-    1, 0, 0, 0, 1
-};
+// Declarations of the letters (A-Z)
+extern double A[NUM_LEDS];
+extern double B[NUM_LEDS];
+extern double C[NUM_LEDS];
+extern double D[NUM_LEDS];
+extern double E[NUM_LEDS];
+extern double F[NUM_LEDS];
+extern double G[NUM_LEDS];
+extern double H[NUM_LEDS];
+extern double I[NUM_LEDS];
+extern double J[NUM_LEDS];
+extern double K[NUM_LEDS];
+extern double L[NUM_LEDS];
+extern double M[NUM_LEDS];
+extern double N[NUM_LEDS];
+extern double O[NUM_LEDS];
+extern double P[NUM_LEDS];
+extern double Q[NUM_LEDS];
+extern double R[NUM_LEDS];
+extern double S[NUM_LEDS];
+extern double T[NUM_LEDS];
+extern double U[NUM_LEDS];
+extern double V[NUM_LEDS];
+extern double W[NUM_LEDS];
+extern double X[NUM_LEDS];
+extern double Y[NUM_LEDS];
+extern double Z[NUM_LEDS];
+extern double exclamation[NUM_LEDS];
+extern double dot[NUM_LEDS];
 
-double B[NUM_LEDS] = 
-{
-    1, 1, 1, 1, 0,
-    1, 0, 0, 0, 1,
-    1, 1, 1, 1, 0,
-    1, 0, 0, 0, 1,
-    1, 1, 1, 1, 0
-};
-
-double C[NUM_LEDS] = 
-{
-    0, 1, 1, 1, 1,
-    1, 0, 0, 0, 0,
-    1, 0, 0, 0, 0,
-    1, 0, 0, 0, 0,
-    0, 1, 1, 1, 1
-};
-
-double D[NUM_LEDS] = 
-{
-    1, 1, 1, 1, 0,
-    1, 0, 0, 0, 1,
-    1, 0, 0, 0, 1,
-    1, 0, 0, 0, 1,
-    1, 1, 1, 1, 0
-};
-
-double E[NUM_LEDS] = 
-{
-    1, 1, 1, 1, 1,
-    1, 0, 0, 0, 0,
-    1, 1, 1, 1, 0,
-    1, 0, 0, 0, 0,
-    1, 1, 1, 1, 1
-};
-
-double F[NUM_LEDS] = 
-{
-    1, 1, 1, 1, 1,
-    1, 0, 0, 0, 0,
-    1, 1, 1, 1, 0,
-    1, 0, 0, 0, 0,
-    1, 0, 0, 0, 0
-};
-
-double G[NUM_LEDS] = 
-{
-    0, 1, 1, 1, 0,
-    1, 0, 0, 0, 0,
-    1, 0, 1, 1, 1,
-    1, 0, 0, 0, 1,
-    0, 1, 1, 1, 0
-};
-
-double H[NUM_LEDS] = 
-{
-    1, 0, 0, 0, 1,
-    1, 0, 0, 0, 1,
-    1, 1, 1, 1, 1,
-    1, 0, 0, 0, 1,
-    1, 0, 0, 0, 1
-};
-
-double I[NUM_LEDS] = 
-{
-    1, 1, 1, 1, 1,
-    0, 0, 1, 0, 0,
-    0, 0, 1, 0, 0,
-    0, 0, 1, 0, 0,
-    1, 1, 1, 1, 1
-};
-
-double J[NUM_LEDS] = 
-{
-    1, 1, 1, 1, 1,
-    0, 0, 1, 0, 0,
-    0, 0, 1, 0, 0,
-    1, 0, 1, 0, 0,
-    0, 1, 0, 0, 0
-};
-
-double K[NUM_LEDS] = 
-{
-    1, 0, 0, 0, 1,
-    1, 0, 0, 1, 0,
-    1, 1, 1, 0, 0,
-    1, 0, 0, 1, 0,
-    1, 0, 0, 0, 1
-};
-
-double L[NUM_LEDS] = 
-{
-    1, 0, 0, 0, 0,
-    1, 0, 0, 0, 0,
-    1, 0, 0, 0, 0,
-    1, 0, 0, 0, 0,
-    1, 1, 1, 1, 1
-};
-
-double M[NUM_LEDS] = 
-{
-    1, 0, 0, 0, 1,
-    1, 1, 0, 1, 1,
-    1, 0, 1, 0, 1,
-    1, 0, 0, 0, 1,
-    1, 0, 0, 0, 1
-};
-
-double N[NUM_LEDS] = 
-{
-    1, 0, 0, 0, 1,
-    1, 1, 0, 0, 1,
-    1, 0, 1, 0, 1,
-    1, 0, 0, 1, 1,
-    1, 0, 0, 0, 1
-};
-
-double O[NUM_LEDS] = 
-{
-    0, 1, 1, 1, 0,
-    1, 0, 0, 0, 1,
-    1, 0, 0, 0, 1,
-    1, 0, 0, 0, 1,
-    0, 1, 1, 1, 0
-};
-
-double P[NUM_LEDS] = 
-{
-    1, 1, 1, 1, 0,
-    1, 0, 0, 0, 1,
-    1, 1, 1, 1, 0,
-    1, 0, 0, 0, 0,
-    1, 0, 0, 0, 0
-};
-
-double Q[NUM_LEDS] = 
-{
-    0, 1, 1, 1, 0,
-    1, 0, 0, 0, 1,
-    1, 0, 0, 0, 1,
-    1, 0, 0, 1, 1,
-    0, 1, 1, 1, 1
-};
-
-double R[NUM_LEDS] = 
-{
-    1, 1, 1, 1, 0,
-    1, 0, 0, 0, 1,
-    1, 1, 1, 1, 0,
-    1, 0, 0, 1, 0,
-    1, 0, 0, 0, 1
-};
-
-double S[NUM_LEDS] = 
-{
-    0, 1, 1, 1, 1,
-    1, 0, 0, 0, 0,
-    0, 1, 1, 1, 0,
-    0, 0, 0, 0, 1,
-    1, 1, 1, 1, 0
-};
-
-double T[NUM_LEDS] = 
-{
-    1, 1, 1, 1, 1,
-    0, 0, 1, 0, 0,
-    0, 0, 1, 0, 0,
-    0, 0, 1, 0, 0,
-    0, 0, 1, 0, 0
-};
-
-double U[NUM_LEDS] = 
-{
-    1, 0, 0, 0, 1,
-    1, 0, 0, 0, 1,
-    1, 0, 0, 0, 1,
-    1, 0, 0, 0, 1,
-    0, 1, 1, 1, 0
-};
-
-double V[NUM_LEDS] = 
-{
-    1, 0, 0, 0, 1,
-    1, 0, 0, 0, 1,
-    1, 0, 0, 0, 1,
-    0, 1, 0, 1, 0,
-    0, 0, 1, 0, 0
-};
-
-double W[NUM_LEDS] = 
-{
-    1, 0, 0, 0, 1,
-    1, 0, 0, 0, 1,
-    1, 0, 1, 0, 1,
-    1, 1, 0, 1, 1,
-    1, 0, 0, 0, 1
-};
-
-double X[NUM_LEDS] = 
-{
-    1, 0, 0, 0, 1,
-    0, 1, 0, 1, 0,
-    0, 0, 1, 0, 0,
-    0, 1, 0, 1, 0,
-    1, 0, 0, 0, 1
-};
-
-double Y[NUM_LEDS] = 
-{
-    1, 0, 0, 0, 1,
-    0, 1, 0, 1, 0,
-    0, 0, 1, 0, 0,
-    0, 0, 1, 0, 0,
-    0, 0, 1, 0, 0
-};
-
-double Z[NUM_LEDS] = 
-{
-    1, 1, 1, 1, 1,
-    0, 0, 0, 1, 0,
-    0, 0, 1, 0, 0,
-    0, 1, 0, 0, 0,
-    1, 1, 1, 1, 1
-};
-
-double exclamation[NUM_LEDS] = 
-{
-    0, 0, 1, 0, 0,
-    0, 0, 1, 0, 0,
-    0, 0, 1, 0, 0,
-    0, 0, 0, 0, 0,
-    0, 0, 1, 0, 0
-};
-
-double dot[NUM_LEDS] = {
-    0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0,
-    0, 0, 1, 0, 0
-};
-
-double *letras_5x5[] = {
-    A, B, C, D, E, F,
-    G, H, I, J, K, L,
-    M, N, O, P, Q, R,
-    S, T, U, V, W, X,
-    Y, Z, clear, exclamation, dot
-};
+extern double *letras_5x5[];
 
 #endif

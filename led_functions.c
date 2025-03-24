@@ -4,7 +4,6 @@
 #include "hardware/clocks.h"
 #include "pico/bootrom.h"
 #include "main.pio.h"
-#include "init_GPIO.h"
 #include "frames.h"
 #include "letters.h"
 #include "led_functions.h"
@@ -138,6 +137,7 @@ void add_led(int index, RGBColor color, PIO pio, uint sm, double intensity) {
 
     set_led(index, adjusted, pio, sm);
 }
+
 void show_message(const char *text, RGBColor color, PIO pio, uint sm, double intensity, int speed) {
     if (!text) return;
 
@@ -183,10 +183,6 @@ void show_message(const char *text, RGBColor color, PIO pio, uint sm, double int
         }
 
         display_frame(&frame[0][0], color, pio, sm, intensity);
-
-        if (!gpio_get(JSTICK)) {
-            reset_usb_boot(0, 0);
-        }
 
         sleep_ms(speed);
     }

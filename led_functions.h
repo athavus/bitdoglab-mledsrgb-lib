@@ -8,7 +8,6 @@
 #include <string.h>
 #include "pico/stdlib.h"
 #include "main.pio.h"
-#include "init_GPIO.h"
 #include "pico/bootrom.h"
 #include "hardware/pio.h"
 #include "letters.h"
@@ -36,20 +35,20 @@ typedef enum {
  * @param g Valor do canal verde
  * @return Valor codificado RGB para envio via PIO
  */
-uint32_t rgb_matrix(double b, double r, double g);
+extern uint32_t rgb_matrix(double b, double r, double g);
 
 /**
  * Normaliza valores de cor RGB de 0–255 para 0.0–1.0.
  * @param color Ponteiro para struct RGBColor a ser normalizada
  */
-void normalize_color(RGBColor *color);
+extern void normalize_color(RGBColor *color);
 
 /**
  * Mapeia um índice lógico (0 a 24) para o índice físico correto do LED na matriz 5x5.
  * @param index Índice lógico do LED
  * @return Índice físico ajustado para mapeamento da matriz
  */
-int map_index_to_position(int index);
+extern int map_index_to_position(int index);
 
 /**
  * Acende um LED específico com uma cor.
@@ -58,14 +57,14 @@ int map_index_to_position(int index);
  * @param pio Instância do PIO usada
  * @param sm State machine ativa
  */
-void set_led(int index, RGBColor color, PIO pio, uint sm);
+extern void set_led(int index, RGBColor color, PIO pio, uint sm);
 
 /**
  * Cria um vetor de frames a partir de uma string de texto.
  * @param text Texto a ser convertido em frames
  * @return Ponteiro para vetor de frames
  */
-double **create_text(const char *text);
+extern double **create_text(const char *text);
 
 /**
  * Exibe um frame completo na matriz de LEDs.
@@ -75,7 +74,7 @@ double **create_text(const char *text);
  * @param sm State machine ativa
  * @param intensity Intensidade (0.0 a 1.0)
  */
-void display_frame(double *frame, RGBColor color, PIO pio, uint sm, double intensity);
+extern void display_frame(double *frame, RGBColor color, PIO pio, uint sm, double intensity);
 
 /**
  * Concatena múltiplos caracteres (frames) em uma matriz horizontal.
@@ -83,7 +82,7 @@ void display_frame(double *frame, RGBColor color, PIO pio, uint sm, double inten
  * @param text_length Quantidade de caracteres
  * @param full_text Matriz de saída contendo o texto completo concatenado
  */
-void concatenate_text(double *text[], int text_length, double full_text[5][MAX_ROWS]);
+extern void concatenate_text(double *text[], int text_length, double full_text[5][MAX_ROWS]);
 
 /**
  * Acende um LED específico sem apagar os demais.
@@ -93,7 +92,7 @@ void concatenate_text(double *text[], int text_length, double full_text[5][MAX_R
  * @param sm State machine ativa
  * @param intensity Intensidade da cor do led
  */
-void add_led(int index, RGBColor color, PIO pio, uint sm, double intensity);
+extern void add_led(int index, RGBColor color, PIO pio, uint sm, double intensity);
 
 /**
  * Exibe uma mensagem rolando na matriz de LEDs.
@@ -104,7 +103,7 @@ void add_led(int index, RGBColor color, PIO pio, uint sm, double intensity);
  * @param intensity Intensidade dos LEDs (0.0 a 1.0)
  * @param speed Velocidade da rolagem em milissegundos
  */
-void show_message(const char *text, RGBColor color, PIO pio, uint sm, double intensity, int speed);
+extern void show_message(const char *text, RGBColor color, PIO pio, uint sm, double intensity, int speed);
 
 /**
  * Exibe um modo de demonstração com várias cores na matriz.
@@ -112,6 +111,6 @@ void show_message(const char *text, RGBColor color, PIO pio, uint sm, double int
  * @param sm State machine ativa
  * @param speed Tempo de espera entre mudanças de cor
  */
-void show_demo1(PIO pio, uint sm, int speed);
+extern void show_demo1(PIO pio, uint sm, int speed);
 
 #endif
